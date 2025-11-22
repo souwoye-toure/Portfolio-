@@ -1,0 +1,434 @@
+body {
+    background-color: #7C5F46;
+    padding-top: 60px;
+}
+
+/* Variables pour les couleurs (à ajuster si vos couleurs globales diffèrent) */
+:root {
+    --main-bg-color: #0c1a2c;
+    /* Fond très foncé de la page */
+    --bar-bg-color: #1C1816;
+    /* Fond de la barre (vide) */
+    --glow-color: #B88C67;
+    /* Bleu lumineux pour le remplissage */
+    --text-color: #e0e6ed;
+    /* Texte clair */
+}
+
+
+
+/* ---------------------------------------------------- */
+/* Styles spécifiques à la section Langues */
+/* ---------------------------------------------------- */
+
+#Langues {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+#Langues h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Conteneur de chaque langue (pour l'espacement vertical) */
+.language-item {
+    margin-bottom: 25px;
+}
+
+/* Style du texte (Drapeau + Nom de la langue) */
+.language-item p {
+    font-weight: bold;
+    margin-bottom: 8px;
+    /* Espace entre le texte et la barre */
+}
+
+/* Conteneur de la barre de progression (le "vide" sombre) */
+.progress-bar-container {
+    background-color: var(--bar-bg-color);
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid#B88C67(255, 255, 255, 0.1);
+}
+
+/* La barre de remplissage elle-même (l'effet lumineux) */
+.progress-bar {
+    height: 100%;
+    /* La largeur est définie par le style inline dans le HTML (ex: width: 60%) */
+    background-color: var(--glow-color);
+    border-radius: 6px;
+
+    /* EFFET LUMINEUX (GLOW) */
+    box-shadow: 0 0 10px var(--glow-color),
+        0 0 5px var(--glow-color);
+
+    transition: width 1s ease-out;
+    /* Pour une belle animation */
+}
+
+
+
+
+
+
+
+
+/* Variables pour les couleurs */
+:root {
+    --main-bg-color: white;
+    /* Arrière-plan principal très foncé */
+    --card-bg-color: #B88C67;
+    /* Arrière-plan du formulaire/infos (un peu plus clair) */
+    --accent-color: #4D3C2F;
+    /* Bleu pour les accents et titres */
+    --text-color: white;
+    /* Texte clair */
+    --input-bg-color: #FBA67C0C;
+    /* Arrière-plan des champs de saisie */
+}
+
+/* Styles pour la section complète (Centrage de l'en-tête) */
+#contactez-moi {
+    text-align: center;
+    padding: 20px 0 60px 0;
+    /* Padding pour l'espace au-dessus et au-dessous */
+    color: var(--text-color);
+}
+
+#contactez-moi h2 {
+    color: var(--accent-color);
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+#contactez-moi .subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* Conteneur Flex pour aligner le Formulaire et les Infos */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Style des Cartes (Formulaire et Infos) --- */
+.form-card,
+.contact-info {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.form-card {
+    flex: 2;
+    /* Prend deux parts d'espace */
+    min-width: 500px;
+    /* Pour garantir une taille minimale sur desktop */
+}
+
+.contact-info {
+    flex: 1;
+    /* Prend une part d'espace */
+    align-self: flex-start;
+    /* Aligne en haut de la ligne Flex */
+    padding-top: 50px;
+    /* Espace pour le formulaire plus haut */
+    padding-left: 40px;
+    /* Pour simuler le décalage sur l'image */
+}
+
+/* --- Styles du Formulaire --- */
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Checkbox et mentions légales */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.9em;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 2px;
+    min-width: 16px;
+    /* Taille minimum pour la case */
+    min-height: 16px;
+    accent-color: var(--accent-color);
+    /* Colore la case à cocher en bleu */
+}
+
+.checkbox-group a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+
+/* Media Query pour la réactivité sur mobile/tablette */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-card {
+        min-width: auto;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-info {
+        align-self: stretch;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+}
+
+
+
+
+
+h1 {
+    color: #fff;
+}
+
+
+h2 {
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 2.9rem;
+    color: #fff;
+
+}
+
+p {
+    font-size: 1.4rem;
+
+}
+
+.size-experience {
+    font-size: 1.4rem;
+}
+
+
+.subtitle {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+#Compétences {
+    /* 1. Active le Flexbox sur la section parente */
+    display: flex;
+
+    /* 2. Centre les éléments horizontalement dans l'espace disponible */
+    justify-content: center;
+
+    /* 3. Optionnel : Ajoute de l'espace autour des éléments pour qu'ils ne soient pas collés */
+    gap: 30px;
+    /* Ajoute 30px d'espace entre chaque compétence */
+
+    /* 4. Optionnel : Centre les éléments verticalement (si vous avez des hauteurs différentes) */
+    align-items: center;
+
+    /* 5. Optionnel : Pour que le titre H2 ne soit pas affecté par Flexbox (si H2 est le premier enfant) */
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+
+
+
+}
+
+.top-header {
+
+    display: flex;
+    align-items: center;
+    background-color: #B88C67;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#Projets {
+    justify-content: center;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #555;
+}
+
+.links-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1b2b45;
+    /* bleu foncé stylé */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-social i {
+    font-size: 18px;
+}
+
+.btn-social:hover {
+    background: #AD7F58;
+    transform: translateY(-2px);
+}
+
+.header-text {
+    color: white;
+}
+
+
+
+.cv-photo-container {
+    display: flex;
+    /* Active Flexbox */
+    align-items: center;
+    /* Centre verticalement la photo et le texte */
+    justify-content: space-between;
+    /* Met la photo à gauche et les infos à droite */
+    width: 100%;
+    /* S'assure qu'il utilise toute la largeur disponible */
+    padding: 20px;
+    /* Optionnel: pour l'espacement intérieur */
+}
+
+.introduction-contenu {
+    /* Styles spécifiques pour la photo (taille, forme, etc.) */
+    flex-grow: 0;
+    /* Empêche la photo de s'étirer */
+}
+
+.cv {
+    /* Styles spécifiques pour le texte/CV */
+    flex-grow: 19;
+    /* Permet à ce bloc d'occuper l'espace restant (si besoin) */
+    text-align: right;
+    /* Si vous voulez que le texte soit aligné à droite */
+
+}
+
+p {
+    color: #fff;
+}
+
+#Certificats {
+    color: white;
+}
+
+#Formations {
+    color: #fff
+}
+
+#Expériences {
+    color: #fff;
+}
