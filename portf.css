@@ -432,3 +432,25 @@ p {
 #Expériences {
     color: #fff;
 }
+
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Pour fusionner les bordures */
+    margin: 20px 0; /* Espace autour du tableau */
+}
+th, td {
+    border: 1px solid #ccc; /* Bordure légère */
+    padding: 10px; /* Espacement à l'intérieur des cellules */
+    text-align: left; /* Alignement du texte à gauche */
+}
+th {
+    background-color: #AD7F58; /* Couleur de fond pour les en-têtes */
+}
+tr:nth-child(even) {
+    background-color: #AD7F58; /* Couleur de fond pour les lignes paires */
+}
