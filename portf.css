@@ -1,30 +1,37 @@
+/* ------------------------ */
+/* Styles Globaux du Body */
+/* ------------------------ */
 body {
     background-color: #7C5F46;
+    /* Couleur de fond générale */
     padding-top: 60px;
+    /* Décalage pour laisser de la place au header fixe */
 }
 
-/* Variables pour les couleurs (à ajuster si vos couleurs globales diffèrent) */
+/* ------------------------ */
+/* Variables CSS globales */
+/* ------------------------ */
 :root {
     --main-bg-color: #0c1a2c;
-    /* Fond très foncé de la page */
+    /* Couleur principale du fond de page */
     --bar-bg-color: #1C1816;
-    /* Fond de la barre (vide) */
+    /* Fond des barres de progression */
     --glow-color: #B88C67;
-    /* Bleu lumineux pour le remplissage */
+    /* Couleur principale pour les effets lumineux (glow) */
     --text-color: #e0e6ed;
-    /* Texte clair */
+    /* Couleur du texte clair */
 }
 
-
-
-/* ---------------------------------------------------- */
-/* Styles spécifiques à la section Langues */
-/* ---------------------------------------------------- */
-
+/* ------------------------ */
+/* Section Langues */
+/* ------------------------ */
 #Langues {
     max-width: 800px;
+    /* Largeur maximale pour la section */
     margin: 40px auto;
+    /* Centrage horizontal + marge verticale */
     padding: 0 20px;
+    /* Espacement intérieur horizontal */
     color: var(--text-color);
     text-align: left;
 }
@@ -36,68 +43,68 @@ body {
     color: var(--text-color);
 }
 
-/* Conteneur de chaque langue (pour l'espacement vertical) */
+/* Conteneur de chaque langue */
 .language-item {
     margin-bottom: 25px;
+    /* Espacement vertical entre chaque langue */
 }
 
-/* Style du texte (Drapeau + Nom de la langue) */
+/* Texte pour le drapeau et le nom de la langue */
 .language-item p {
     font-weight: bold;
     margin-bottom: 8px;
-    /* Espace entre le texte et la barre */
+    /* Espace entre le texte et la barre de progression */
 }
 
-/* Conteneur de la barre de progression (le "vide" sombre) */
+/* Conteneur de la barre de progression */
 .progress-bar-container {
     background-color: var(--bar-bg-color);
+    /* Fond sombre */
     height: 12px;
     border-radius: 6px;
+    /* Coins arrondis */
     overflow: hidden;
-    border: 1px solid#B88C67(255, 255, 255, 0.1);
+    /* Empêche le remplissage de dépasser */
+    border: 1px solid rgba(184, 140, 103, 0.1);
+    /* Bordure subtile semi-transparente */
 }
 
-/* La barre de remplissage elle-même (l'effet lumineux) */
+/* Barre de progression lumineuse */
 .progress-bar {
     height: 100%;
-    /* La largeur est définie par le style inline dans le HTML (ex: width: 60%) */
+    /* Hauteur complète du conteneur */
     background-color: var(--glow-color);
+    /* Couleur principale */
     border-radius: 6px;
-
-    /* EFFET LUMINEUX (GLOW) */
-    box-shadow: 0 0 10px var(--glow-color),
-        0 0 5px var(--glow-color);
-
+    box-shadow: 0 0 10px var(--glow-color), 0 0 5px var(--glow-color);
+    /* Effet lumineux */
     transition: width 1s ease-out;
-    /* Pour une belle animation */
+    /* Animation fluide lors du changement de largeur */
 }
 
+/* ------------------------ */
+/* Section Contact */
+/* ------------------------ */
 
-
-
-
-
-
-
-/* Variables pour les couleurs */
+/* Variables supplémentaires pour le contact et les cartes */
 :root {
     --main-bg-color: white;
-    /* Arrière-plan principal très foncé */
+    /* Fond général clair */
     --card-bg-color: #B88C67;
-    /* Arrière-plan du formulaire/infos (un peu plus clair) */
+    /* Fond des cartes/formulaires */
     --accent-color: #4D3C2F;
-    /* Bleu pour les accents et titres */
+    /* Couleur pour titres et accents */
     --text-color: white;
-    /* Texte clair */
+    /* Texte clair sur les cartes */
     --input-bg-color: #FBA67C0C;
-    /* Arrière-plan des champs de saisie */
+    /* Fond des champs de saisie (très clair/translucide) */
 }
 
-/* Styles pour la section complète (Centrage de l'en-tête) */
+/* Section entière du contact */
 #contactez-moi {
     text-align: center;
     padding: 20px 0 60px 0;
-    /* Padding pour l'espace au-dessus et au-dessous */
+    /* Padding vertical */
     color: var(--text-color);
 }
 
@@ -113,7 +120,7 @@ body {
     font-size: 1.1em;
 }
 
-/* Conteneur Flex pour aligner le Formulaire et les Infos */
+/* Conteneur Flex pour aligner le formulaire et les infos */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -123,35 +130,32 @@ body {
     margin: 0 auto;
 }
 
-/* --- Style des Cartes (Formulaire et Infos) --- */
+/* Cartes (formulaire et informations de contact) */
 .form-card,
 .contact-info {
     background-color: var(--card-bg-color);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    /* Ombre pour effet de profondeur */
     box-sizing: border-box;
 }
 
 .form-card {
     flex: 2;
-    /* Prend deux parts d'espace */
+    /* Prend plus de place */
     min-width: 500px;
-    /* Pour garantir une taille minimale sur desktop */
 }
 
 .contact-info {
     flex: 1;
-    /* Prend une part d'espace */
+    /* Prend moins de place */
     align-self: flex-start;
-    /* Aligne en haut de la ligne Flex */
     padding-top: 50px;
-    /* Espace pour le formulaire plus haut */
     padding-left: 40px;
-    /* Pour simuler le décalage sur l'image */
 }
 
-/* --- Styles du Formulaire --- */
+/* Formulaire */
 .contact-form {
     display: flex;
     flex-wrap: wrap;
@@ -180,6 +184,7 @@ label {
     color: var(--text-color);
 }
 
+/* Champs de saisie */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -195,6 +200,7 @@ textarea {
 
 textarea {
     resize: vertical;
+    /* Permet le redimensionnement vertical seulement */
 }
 
 /* Checkbox et mentions légales */
@@ -210,10 +216,9 @@ textarea {
     margin-right: 10px;
     margin-top: 2px;
     min-width: 16px;
-    /* Taille minimum pour la case */
     min-height: 16px;
     accent-color: var(--accent-color);
-    /* Colore la case à cocher en bleu */
+    /* Couleur de la case */
 }
 
 .checkbox-group a {
@@ -221,8 +226,9 @@ textarea {
     text-decoration: none;
 }
 
-
-/* Media Query pour la réactivité sur mobile/tablette */
+/* ------------------------ */
+/* Media Query pour réactivité */
+/* ------------------------ */
 @media (max-width: 900px) {
     .contact-container {
         flex-direction: column;
@@ -245,14 +251,12 @@ textarea {
     }
 }
 
-
-
-
-
+/* ------------------------ */
+/* Titres et textes globaux */
+/* ------------------------ */
 h1 {
     color: #fff;
 }
-
 
 h2 {
     width: 100%;
@@ -260,18 +264,19 @@ h2 {
     flex-wrap: wrap;
     font-size: 2.9rem;
     color: #fff;
-
+}
+h3{
+    font-size: 25px;
 }
 
 p {
     font-size: 1.4rem;
-
+    color: #fff;
 }
 
 .size-experience {
     font-size: 1.4rem;
 }
-
 
 .subtitle {
     text-align: center;
@@ -281,37 +286,33 @@ footer {
     text-align: center;
 }
 
+/* ------------------------ */
+/* Compétences Section */
+/* ------------------------ */
 #Compétences {
-    /* 1. Active le Flexbox sur la section parente */
     display: flex;
-
-    /* 2. Centre les éléments horizontalement dans l'espace disponible */
     justify-content: center;
-
-    /* 3. Optionnel : Ajoute de l'espace autour des éléments pour qu'ils ne soient pas collés */
+    /* Centre horizontalement */
     gap: 30px;
-    /* Ajoute 30px d'espace entre chaque compétence */
-
-    /* 4. Optionnel : Centre les éléments verticalement (si vous avez des hauteurs différentes) */
+    /* Espace entre compétences */
     align-items: center;
-
-    /* 5. Optionnel : Pour que le titre H2 ne soit pas affecté par Flexbox (si H2 est le premier enfant) */
+    /* Centre verticalement */
     flex-wrap: wrap;
+    /* Permet au contenu de se mettre à la ligne */
     color: #fff;
 }
 
+/* ------------------------ */
+/* Navigation / Header */
+/* ------------------------ */
 .main-nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
     gap: 30px;
-
-
-
 }
 
 .top-header {
-
     display: flex;
     align-items: center;
     background-color: #B88C67;
@@ -321,15 +322,20 @@ footer {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
-
 }
 
 .main-nav a {
     text-decoration: none;
     font-weight: bold;
     color: white;
+    text-align: right;
+    align-items: end;
+    font-size: 20px;
 }
 
+/* ------------------------ */
+/* Section Projets */
+/* ------------------------ */
 #Projets {
     justify-content: center;
     gap: 30px;
@@ -338,6 +344,7 @@ footer {
     flex-wrap: wrap;
 }
 
+/* Images rondes */
 .photo {
     width: 180px;
     height: 180px;
@@ -346,12 +353,14 @@ footer {
     border: 3px solid #555;
 }
 
+/* Conteneur des liens sociaux */
 .links-container {
     margin-top: 20px;
     display: flex;
     gap: 15px;
 }
 
+/* Boutons sociaux */
 .social-buttons {
     display: flex;
     gap: 12px;
@@ -364,7 +373,6 @@ footer {
     align-items: center;
     gap: 8px;
     background: #1b2b45;
-    /* bleu foncé stylé */
     color: white;
     padding: 10px 18px;
     border-radius: 25px;
@@ -381,76 +389,66 @@ footer {
 .btn-social:hover {
     background: #AD7F58;
     transform: translateY(-2px);
+    /* Animation au hover */
 }
 
-.header-text {
-    color: white;
-}
-
-
-
+/* ------------------------ */
+/* CV / Introduction Header */
+/* ------------------------ */
 .cv-photo-container {
     display: flex;
-    /* Active Flexbox */
     align-items: center;
-    /* Centre verticalement la photo et le texte */
     justify-content: space-between;
-    /* Met la photo à gauche et les infos à droite */
     width: 100%;
-    /* S'assure qu'il utilise toute la largeur disponible */
     padding: 20px;
-    /* Optionnel: pour l'espacement intérieur */
 }
 
 .introduction-contenu {
-    /* Styles spécifiques pour la photo (taille, forme, etc.) */
     flex-grow: 0;
-    /* Empêche la photo de s'étirer */
 }
 
 .cv {
-    /* Styles spécifiques pour le texte/CV */
     flex-grow: 19;
-    /* Permet à ce bloc d'occuper l'espace restant (si besoin) */
     text-align: right;
-    /* Si vous voulez que le texte soit aligné à droite */
-
 }
 
-p {
-    color: #fff;
-}
-
-#Certificats {
+/* ------------------------ */
+/* Sections Certificats, Formations, Expériences */
+/* ------------------------ */
+#Certificats,
+#Formations,
+#Expériences {
     color: white;
 }
 
-#Formations {
-    color: #fff
-}
-
-#Expériences {
-    color: #fff;
-}
-
-
-
-
-
-
+/* ------------------------ */
+/* Tables pour Formations et Certificats */
+/* ------------------------ */
 table {
     width: 100%;
-    border-collapse: collapse; /* Pour fusionner les bordures */
-    margin: 20px 0; /* Espace autour du tableau */
+    border-collapse: collapse;
+    margin: 20px 0;
 }
-th, td {
-    border: 1px solid #ccc; /* Bordure légère */
-    padding: 10px; /* Espacement à l'intérieur des cellules */
-    text-align: left; /* Alignement du texte à gauche */
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
 }
+
 th {
-    background-color: #AD7F58; /* Couleur de fond pour les en-têtes */
+    background-color: #AD7F58;
 }
+
 tr:nth-child(even) {
-    background-color: #AD7F58; /* Couleur de fond pour les lignes paires */
+    background-color: #AD7F58;
+}
+
+
+
+
+/* Menu actif */
+.main-nav a.active {
+    color: #7C5F46; /* Couleur active */
 }
