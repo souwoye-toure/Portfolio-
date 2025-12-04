@@ -3,9 +3,7 @@
 /* ------------------------ */
 body {
   background-color: #ebdaca;
-  /* Couleur de fond générale */
   padding-top: 60px;
-  /* Décalage pour laisser de la place au header fixe */
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -15,13 +13,9 @@ body {
 /* ------------------------ */
 :root {
   --main-bg-color: #0c1a2c;
-  /* Couleur principale du fond de page */
   --bar-bg-color: #ad7f58;
-  /* Fond des barres de progression */
   --glow-color: #dcbc9f;
-  /* Couleur principale pour les effets lumineux (glow) */
   --text-color: black;
-  /* Couleur du texte clair */
 }
 
 /* ------------------------ */
@@ -29,11 +23,8 @@ body {
 /* ------------------------ */
 #Langues {
   max-width: 800px;
-  /* Largeur maximale pour la section */
   margin: 40px auto;
-  /* Centrage horizontal + marge verticale */
   padding: 0 20px;
-  /* Espacement intérieur horizontal */
   color: var(--text-color);
   text-align: left;
 }
@@ -45,68 +36,43 @@ body {
   color: var(--text-color);
 }
 
-/* Conteneur de chaque langue */
 .language-item {
   margin-bottom: 25px;
-  /* Espacement vertical entre chaque langue */
 }
 
-/* Texte pour le drapeau et le nom de la langue */
 .language-item p {
   font-weight: bold;
   margin-bottom: 8px;
-  /* Espace entre le texte et la barre de progression */
 }
 
-/* Conteneur de la barre de progression */
 .progress-bar-container {
   background-color: var(--bar-bg-color);
-  /* Fond sombre */
   height: 12px;
   border-radius: 6px;
-  /* Coins arrondis */
   overflow: hidden;
-  /* Empêche le remplissage de dépasser */
   border: 1px solid rgba(184, 140, 103, 0.1);
-  /* Bordure subtile semi-transparente */
 }
 
-/* Barre de progression lumineuse */
 .progress-bar {
   height: 100%;
-  /* Hauteur complète du conteneur */
   background-color: var(--glow-color);
-  /* Couleur principale */
   border-radius: 6px;
   box-shadow: 0 0 10px var(--glow-color), 0 0 5px var(--glow-color);
-  /* Effet lumineux */
   transition: width 1s ease-out;
-  /* Animation fluide lors du changement de largeur */
 }
 
 /* ------------------------ */
 /* Section Contact */
 /* ------------------------ */
-
-/* Variables supplémentaires pour le contact et les cartes */
 :root {
-  --main-bg-color: black;
-  /* Fond général clair */
   --card-bg-color: #dcbc9f;
-  /* Fond des cartes/formulaires */
   --accent-color: #ebdaca;
-  /* Couleur pour titres et accents */
-  --text-color: black;
-  /* Texte clair sur les cartes */
   --input-bg-color: #fba67c0c;
-  /* Fond des champs de saisie (très clair/translucide) */
 }
 
-/* Section entière du contact */
 #contactez-moi {
   text-align: center;
   padding: 20px 0 60px 0;
-  /* Padding vertical */
   color: var(--text-color);
 }
 
@@ -122,7 +88,6 @@ body {
   font-size: 1.1em;
 }
 
-/* Conteneur Flex pour aligner le formulaire et les infos */
 .contact-container {
   display: flex;
   justify-content: center;
@@ -132,32 +97,27 @@ body {
   margin: 0 auto;
 }
 
-/* Cartes (formulaire et informations de contact) */
 .form-card,
 .contact-info {
   background-color: var(--card-bg-color);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  /* Ombre pour effet de profondeur */
   box-sizing: border-box;
 }
 
 .form-card {
   flex: 2;
-  /* Prend plus de place */
   min-width: 500px;
 }
 
 .contact-info {
   flex: 1;
-  /* Prend moins de place */
   align-self: flex-start;
   padding-top: 50px;
   padding-left: 40px;
 }
 
-/* Formulaire */
 .contact-form {
   display: flex;
   flex-wrap: wrap;
@@ -186,7 +146,6 @@ label {
   color: var(--text-color);
 }
 
-/* Champs de saisie */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -202,10 +161,8 @@ textarea {
 
 textarea {
   resize: vertical;
-  /* Permet le redimensionnement vertical seulement */
 }
 
-/* Checkbox et mentions légales */
 .checkbox-group {
   display: flex;
   align-items: flex-start;
@@ -220,37 +177,11 @@ textarea {
   min-width: 16px;
   min-height: 16px;
   accent-color: var(--accent-color);
-  /* Couleur de la case */
 }
 
 .checkbox-group a {
   color: var(--accent-color);
   text-decoration: none;
-}
-
-/* ------------------------ */
-/* Media Query pour réactivité */
-/* ------------------------ */
-@media (max-width: 900px) {
-  .contact-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .form-card {
-    min-width: auto;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .contact-info {
-    align-self: stretch;
-    padding-top: 30px;
-    padding-left: 30px;
-  }
 }
 
 /* ------------------------ */
@@ -295,13 +226,9 @@ footer {
 #Compétences {
   display: flex;
   justify-content: center;
-  /* Centre horizontalement */
   gap: 30px;
-  /* Espace entre compétences */
   align-items: center;
-  /* Centre verticalement */
   flex-wrap: wrap;
-  /* Permet au contenu de se mettre à la ligne */
   color: #fff;
 }
 
@@ -362,50 +289,23 @@ footer {
   display: flex;
   gap: 15px;
 }
-.social-button_github-btn {
-  text-decoration: none;
-  color: black;
-  background-color: #dcbc9f;
-  padding: 10px 20px; /* Ajuste l'espacement intérieur du rectangle */
-  border-radius: 25px; /* Arrondit les coins du rectangle */
-  margin-top: 10px; /* Espace au-dessus du bouton */
-  display: inline-block; /* Permet d'ajouter des marges */
-}
-.social-button_linkedin-btn {
-  text-decoration: none;
-  color: black;
-  background-color: #dcbc9f;
-  padding: 10px 20px; /* Ajuste l'espacement intérieur du rectangle */
-  border-radius: 25px; /* Arrondit les coins du rectangle */
-  margin-top: 10px; /* Espace au-dessus du bouton */
-  display: inline-block; /* Permet d'ajouter des marges */
-}
-.social-button_email-btn {
-  text-decoration: none;
-  color: black;
-  background-color: #dcbc9f;
-  padding: 10px 20px; /* Ajuste l'espacement intérieur du rectangle */
-  border-radius: 25px; /* Arrondit les coins du rectangle */
-  margin-top: 10px; /* Espace au-dessus du bouton */
-  display: inline-block; /* Permet d'ajouter des marges */
-}
-.social-button_call-btn {
-  text-decoration: none;
-  color: black;
-  background-color: #dcbc9f;
-  padding: 10px 20px; /* Ajuste l'espacement intérieur du rectangle */
-  border-radius: 25px; /* Arrondit les coins du rectangle */
-  margin-top: 10px; /* Espace au-dessus du bouton */
-  display: inline-block; /* Permet d'ajouter des marges */
-}
+
+.social-button_github-btn,
+.social-button_linkedin-btn,
+.social-button_email-btn,
+.social-button_call-btn,
 .btn-telecharger {
   text-decoration: none;
   color: black;
   background-color: #dcbc9f;
-  padding: 10px 20px; /* Ajuste l'espacement intérieur du rectangle */
-  border-radius: 5px; /* Arrondit les coins du rectangle */
-  margin-top: 10px; /* Espace au-dessus du bouton */
-  display: inline-block; /* Permet d'ajouter des marges */
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.btn-telecharger {
+  border-radius: 5px;
 }
 
 /* ------------------------ */
@@ -425,14 +325,14 @@ footer {
 
 .cv {
   display: flex;
-  flex-direction: column; /* Cela aligne les éléments en colonne */
-  align-items: center; /* Centre les éléments horizontalement */
+  flex-direction: column;
+  align-items: center;
   margin-top: 15px;
   padding: 70px;
 }
 
 /* ------------------------ */
-/* Sections Certificats, Formations, Expériences */
+/* Tables pour Formations et Certificats */
 /* ------------------------ */
 #Certificats,
 #Formations,
@@ -440,9 +340,6 @@ footer {
   color: black;
 }
 
-/* ------------------------ */
-/* Tables pour Formations et Certificats */
-/* ------------------------ */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -467,8 +364,8 @@ tr:nth-child(even) {
 /* Menu actif */
 .main-nav a.active {
   color: #7c5f46;
-  /* Couleur active */
 }
+
 .menu-btn {
   display: none;
   background: transparent;
@@ -476,6 +373,7 @@ tr:nth-child(even) {
   cursor: pointer;
   padding: 10px;
 }
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -486,6 +384,7 @@ tr:nth-child(even) {
   border-radius: 2px;
   position: relative;
 }
+
 .hamburger::before,
 .hamburger::after {
   content: "";
@@ -493,9 +392,117 @@ tr:nth-child(even) {
   left: 0;
   transition: transform 0.28s ease, opacity 0.2s ease;
 }
+
 .hamburger::before {
   top: -8px;
 }
+
 .hamburger::after {
   top: 8px;
+}
+
+/* ------------------------ */
+/* ------------------------ */
+/* MEDIA QUERY MOBILE STRICTEMENT NECESSAIRE */
+/* ------------------------ */
+@media (max-width: 768px) {
+
+  /* Header responsive */
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+    background-color: #dcbc9f;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 90%;
+  }
+
+  .main-nav.active ul {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  /* CV et introduction */
+  .cv-photo-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cv {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .introduction-contenu {
+    margin-bottom: 20px;
+  }
+
+  /* Liens sociaux */
+  .links-container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* Sections compétences et projets */
+  #Compétences, #Projets {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Images adaptatives */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Formulaire contact */
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-info {
+    align-self: stretch;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  /* Tableaux scrollables */
+  .table-wrapper {
+    overflow-x: auto;
+  }
 }
