@@ -13,8 +13,8 @@ body {
 /* ------------------------ */
 :root {
   --main-bg-color: #0c1a2c;
-  --bar-bg-color: #ad7f58;
-  --glow-color: #dcbc9f;
+  --bar-bg-color:  #dcbc9f;
+  --glow-color: #ad7f58;
   --text-color: black;
 }
 
