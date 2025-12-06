@@ -406,7 +406,6 @@ tr:nth-child(even) {
 /* MEDIA QUERY MOBILE STRICTEMENT NECESSAIRE */
 /* ------------------------ */
 @media (max-width: 768px) {
-
   /* Header responsive */
   .top-header {
     flex-direction: column;
@@ -462,7 +461,8 @@ tr:nth-child(even) {
   }
 
   /* Sections compétences et projets */
-  #Compétences, #Projets {
+  #Compétences,
+  #Projets {
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -505,4 +505,9 @@ tr:nth-child(even) {
   .table-wrapper {
     overflow-x: auto;
   }
+}
+.voir {
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
