@@ -1,12 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-// ------------------------------
-// 1. MENU RESPONSIVE (mobile)
-// ------------------------------
-const menuBtn = document.getElementById("menu-toggle");
-const nav = document.querySelector(".main-nav");
+  console.log("JS OK");
 
-menuBtn.addEventListener("click", () => {
-  nav.classList.toggle("active");
-  const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-  menuBtn.setAttribute("aria-expanded", !expanded);
+  /* ===============================
+     MENU BURGER
+  ================================ */
+  const menuBtn = document.getElementById("menu-toggle");
+  const nav = document.querySelector(".main-nav");
+
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+
+  /* ===============================
+     SCROLL FLUIDE (SAFE)
+  ================================ */
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+
+      if (!href.startsWith('#')) return;
+
+      const id = href.substring(1);
+      const section = document.getElementById(id);
+
+      if (!section) return;
+
+      e.preventDefault();
+      section.scrollIntoView({ behavior: 'smooth' });
+
+      nav.classList.remove("active");
+    });
+  });
+
 });
