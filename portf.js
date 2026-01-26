@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("JS OK");
 
-  /* ===============================
-     MENU BURGER
-  ================================ */
+ 
   const menuBtn = document.getElementById("menu-toggle");
   const nav = document.querySelector(".main-nav");
 
@@ -14,9 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ===============================
-     SCROLL FLUIDE (SAFE)
-  ================================ */
+  
   document.querySelectorAll('.main-nav a').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');

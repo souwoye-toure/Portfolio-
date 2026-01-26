@@ -1,0 +1,107 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://i.pinimg.com/1200x/1d/7c/90/1d7c90d511b171bfbfbf1762bbb93e2e.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+
+
+.container {
+  background: rgba(17, 50, 100, 0.85); 
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  text-align: center;
+  width: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+h1 {
+  margin-bottom: 25px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px #000;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+
+input[type="number"] {
+  padding: 12px;
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: center;
+  background: #fff;
+  color: #113264;
+  transition: 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+  outline: none;
+}
+
+
+button {
+  padding: 12px 25px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffcc00, #ff6600);
+  color: #113264;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00ffcc, #0099ff);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+
+#message {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 1px 1px 3px #000;
+  min-height: 40px;
+}
+
+#scoreboard {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffff;
+}
+#scoreboard span {
+  margin: 0 10px;
+}
+

@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculatrice</title>
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="ExerciceCalculatrice.css">
 </head>
 <body>
-    <button onclick="calculatrice()">calculatrice</button>
+
+    <h1>Calculatrice</h1>
+
+    <div id="calc">
+        <input type="number" id="nb1" placeholder="Premier nombre">
+        <input type="number" id="nb2" placeholder="Deuxième nombre">
+
+        <div id="boutons">
+            <button onclick="afficherResultat('addition')">+</button>
+            <button onclick="afficherResultat('soustraction')">-</button>
+            <button onclick="afficherResultat('multiplication')">*</button>
+            <button onclick="afficherResultat('division')">/</button>
+        </div>
+    </div>
+
+    <div id="resultat"></div>
+
     <script src="ExerciceCalculatrice.js"></script>
 </body>
 </html>

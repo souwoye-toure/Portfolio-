@@ -1,6 +1,4 @@
-/* ------------------------ */
-/* Styles Globaux du Body */
-/* ------------------------ */
+
 body {
   background-color: #ebdaca;
   padding-top: 60px;
@@ -8,9 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ------------------------ */
-/* Variables CSS globales */
-/* ------------------------ */
+
 :root {
   --main-bg-color: #0c1a2c;
   --bar-bg-color:  #dcbc9f;
@@ -18,9 +14,7 @@ body {
   --text-color: black;
 }
 
-/* ------------------------ */
-/* Section Langues */
-/* ------------------------ */
+
 #Langues {
   max-width: 800px;
   margin: 40px auto;
@@ -184,9 +178,7 @@ textarea {
   text-decoration: none;
 }
 
-/* ------------------------ */
-/* Titres et textes globaux */
-/* ------------------------ */
+
 h1 {
   color: black;
 }
@@ -220,9 +212,7 @@ footer {
   text-align: center;
 }
 
-/* ------------------------ */
-/* Compétences Section */
-/* ------------------------ */
+
 #Compétences {
   display: flex;
   justify-content: center;
@@ -232,9 +222,7 @@ footer {
   color: #fff;
 }
 
-/* ------------------------ */
-/* Navigation / Header */
-/* ------------------------ */
+
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -264,9 +252,7 @@ footer {
   margin-left: 20px;
 }
 
-/* ------------------------ */
-/* Section Projets */
-/* ------------------------ */
+
 #Projets {
   justify-content: center;
   gap: 30px;
@@ -275,7 +261,7 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Images rondes */
+
 .photo {
   width: 250px;
   height: 250px;
@@ -284,7 +270,7 @@ footer {
   border: 3px solid #555;
 }
 
-/* Conteneur des liens sociaux */
+
 .links-container {
   display: flex;
   gap: 15px;
@@ -308,9 +294,7 @@ footer {
   border-radius: 5px;
 }
 
-/* ------------------------ */
-/* CV / Introduction Header */
-/* ------------------------ */
+
 .cv-photo-container {
   display: flex;
   align-items: center;
@@ -331,9 +315,7 @@ footer {
   padding: 70px;
 }
 
-/* ------------------------ */
-/* Tables pour Formations et Certificats */
-/* ------------------------ */
+
 #Certificats,
 #Formations,
 #Expériences {
@@ -361,7 +343,7 @@ tr:nth-child(even) {
   background-color: #dcbc9f;
 }
 
-/* Menu actif */
+
 .main-nav a.active {
   color: #7c5f46;
 }
@@ -401,12 +383,9 @@ tr:nth-child(even) {
   top: 8px;
 }
 
-/* ------------------------ */
-/* ------------------------ */
-/* MEDIA QUERY MOBILE STRICTEMENT NECESSAIRE */
-/* ------------------------ */
+
 @media (max-width: 768px) {
-  /* Header responsive */
+  
   .top-header {
     flex-direction: column;
     align-items: center;
@@ -437,7 +416,7 @@ tr:nth-child(even) {
     right: 20px;
   }
 
-  /* CV et introduction */
+  
   .cv-photo-container {
     flex-direction: column;
     align-items: center;
@@ -453,14 +432,14 @@ tr:nth-child(even) {
     margin-bottom: 20px;
   }
 
-  /* Liens sociaux */
+  
   .links-container {
     flex-direction: column;
     gap: 10px;
     align-items: center;
   }
 
-  /* Sections compétences et projets */
+  
   #Compétences,
   #Projets {
     flex-direction: column;
@@ -468,7 +447,7 @@ tr:nth-child(even) {
     gap: 20px;
   }
 
-  /* Images adaptatives */
+ 
   img {
     max-width: 100%;
     height: auto;
@@ -479,7 +458,7 @@ tr:nth-child(even) {
     height: 150px;
   }
 
-  /* Formulaire contact */
+  
   .contact-container {
     flex-direction: column;
     gap: 20px;

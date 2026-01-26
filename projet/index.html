@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de Devinette</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <h1>Jeu de Devinette</h1>
+
+    
+    <div id="scoreboard">
+      <span id="scoreJoueur">Joueur : 0</span> |
+      <span id="scoreBot">Bot : 0</span>
+    </div>
+
+    <label for="number">Choisir un nombre (1 à 10) :</label>
+    <input type="number" name="number" id="number" min="1" max="10">
+
+    <button id="btnValider">Valider</button>
+    <button id="btnBot">Bot joue</button>
+    <button id="btnRejouer">Rejouer</button>
+
+    <div id="message"></div>
+</div>
+
+
+
+  <script src="Script.js"></script>
+</body>
+</html>

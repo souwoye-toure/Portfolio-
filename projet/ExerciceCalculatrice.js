@@ -1,77 +1,48 @@
-
-
 function soustraction(x, y) {
-    return x - y
+    return x - y;
 }
 
 function addition(x, y) {
-    return x + y
+    return x + y;
 }
 
 function multiply(x, y) {
-    return x * y
+    return x * y;
 }
 
 function divide(x, y) {
-    if (0 === y) {
-        return 'erreur division par zéro'
+    if (y === 0) {
+        return 'Erreur : division par zéro';
     }
-
-    return x / y
+    return x / y;
 }
 
-function calculatrice() {
-    let sortie = true
-    while (sortie) {
-        let operateur = prompt(`1 -> addition
-2 -> soustraction
-3 -> multiplication
-4 -> division
-5 -> sortie`)
+function afficherResultat(operation) {
+    let nb1 = parseFloat(document.getElementById("nb1").value);
+    let nb2 = parseFloat(document.getElementById("nb2").value);
+    let resultat;
 
-
-
-        if (5 === +operateur || 'sortie' === operateur) {
-            console.log('Au revoir')
-            sortie = false
-        } else {
-            let operateurNumber = parseFloat(prompt('Tapez un chiffre'))
-            let operateurSecondNumber = +prompt('Tapez un second chiffre')
-            let calcul
-
-            switch (operateur) {
-                case '+':
-                case 'addition':
-                case '1':
-                    calcul = addition(operateurNumber, operateurSecondNumber)
-                    break
-
-                case '-':
-                case '2':
-                case 'soustraction':
-                    calcul = soustraction(operateurNumber, operateurSecondNumber)
-                    break
-
-                case '*':
-                case '3':
-                case 'multiplication':
-                    calcul = multiply(operateurNumber, operateurSecondNumber)
-                    break
-
-                case '/':
-                case '4':
-                case 'division':
-                    calcul = divide(operateurNumber, operateurSecondNumber)
-                    break
-
-                default:
-                    console.log('opérateur non reconnu')
-            }
-
-            console.log('mon résultat est : ' + calcul)
-        }
+    if (isNaN(nb1) || isNaN(nb2)) {
+        document.getElementById("resultat").innerHTML = "Veuillez entrer deux nombres valides.";
+        return;
     }
+
+    switch (operation) {
+        case 'addition':
+            resultat = addition(nb1, nb2);
+            break;
+        case 'soustraction':
+            resultat = soustraction(nb1, nb2);
+            break;
+        case 'multiplication':
+            resultat = multiply(nb1, nb2);
+            break;
+        case 'division':
+            resultat = divide(nb1, nb2);
+            break;
+    }
+
+    document.getElementById("resultat").innerHTML = `
+        Résultat : <strong>${resultat}</strong>
+    `;
 }
-
-
-
